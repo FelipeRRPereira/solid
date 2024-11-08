@@ -1,25 +1,38 @@
+<p align="center">
+   <img src="assets/hobbit.png" width="80%" />
+</p>
+<h2 align="center">
+  Senhor dos Anéis - S.O.L.I.D
+</h2>
+
+[![Autor](https://img.shields.io/badge/Student-FelipeRRPereira-407641?style=flat-square)](https://github.com/FelipeRRPereira)
+[![Languages](https://img.shields.io/github/languages/count/FelipeRRPereira/solid?color=407641&label=Langueges&style=flat-square)](#)
+[![GitHub issues](https://img.shields.io/github/issues/FelipeRRPereira/solid?color=407641&label=Issues&style=flat-square)](https://github.com/FelipeRRPereira/solid/issues)
+[![GitHub forks](https://img.shields.io/github/forks/FelipeRRPereira/solid?color=407641&label=Forks&style=flat-square)](https://github.com/FelipeRRPereira/solid/network)
+[![GitHub stars](https://img.shields.io/github/stars/FelipeRRPereira/solid?color=407641&label=Stars&style=flat-square)](https://github.com/FelipeRRPereira/solid/stargazers)
+
 ## Princípios SOLID
 
-Os princípios SOLID são diretrizes de design de código que ajudam a criar software modular, de fácil manutenção e extensível. Cada letra de SOLID representa um princípio:
+Os princípios SOLID são guias que ajudam a organizar o código, tornando-o mais claro e fácil de manter. Aqui estão eles, explicados por meio de exemplos inspirados em *Senhor dos Anéis*.
 
 ### 1. **Single Responsibility Principle (SRP) - Princípio da Responsabilidade Única**
 
-Cada classe deve ter uma única responsabilidade, ou seja, um motivo único para mudar. Isso significa que uma classe deve ser focada em uma única funcionalidade ou tarefa. Isso facilita a manutenção, pois alterações em uma responsabilidade não afetam outras funcionalidades.
+Imagine que Aragorn e Frodo têm missões muito diferentes: Aragorn deve proteger o povo de Gondor, enquanto Frodo tem a tarefa de destruir o Anel. Se Frodo tentasse fazer o trabalho de Aragorn, ele se desviaria de sua jornada, e a missão de destruir o Anel poderia falhar. Da mesma forma, no código, cada classe deve ter uma única responsabilidade, concentrando-se em apenas uma tarefa. Isso facilita a manutenção, pois qualquer ajuste na “responsabilidade” não afeta outras funcionalidades.
 
 ### 2. **Open-Closed Principle (OCP) - Princípio Aberto-Fechado**
 
-O código deve estar aberto para extensão, mas fechado para modificação. Em outras palavras, você deve poder adicionar novos comportamentos ou funcionalidades através de extensão, sem alterar o código existente. Isso promove a reutilização e minimiza o risco de introduzir bugs em funcionalidades já implementadas.
+Gandalf é um mago sábio e versátil, que adapta suas habilidades de acordo com o que a jornada demanda — ele usa magia para guiar, proteger e lutar, mas nunca precisa "mudar sua essência" para fazer isso. No código, o OCP nos lembra que devemos poder adicionar novas funcionalidades (como Gandalf usa novos feitiços) sem modificar o código original. Por exemplo, se queremos adicionar novos tipos de personagens em uma aventura, criamos novos personagens sem alterar a estrutura existente. Isso mantém o código estável e flexível para expansão.
 
 ### 3. **Liskov Substitution Principle (LSP) - Princípio da Substituição de Liskov**
 
-Objetos de uma classe derivada devem poder substituir objetos de sua classe base sem alterar o comportamento do programa. Em essência, isso significa que as subclasses devem manter as funcionalidades esperadas da classe base, evitando efeitos colaterais indesejados quando um objeto é substituído por outro.
+Aragorn e Legolas são guerreiros muito diferentes: um é um ranger, e o outro, um arqueiro élfico. No entanto, ambos podem lutar juntos no campo de batalha, e cada um cumpre seu papel de guerreiro de modo intercambiável em combate. O LSP sugere que, se temos uma classe base (como Guerreiro), qualquer classe derivada (como Aragorn ou Legolas) deve poder substituí-la sem impactar o comportamento esperado. Dessa forma, em um código que espera um guerreiro, tanto Aragorn quanto Legolas poderão entrar em ação, sem precisar de ajustes.
 
 ### 4. **Interface Segregation Principle (ISP) - Princípio da Segregação de Interface**
 
-Classes não devem ser forçadas a implementar interfaces que não utilizam. Em vez de criar uma única interface ampla para várias funcionalidades, divida-as em interfaces específicas para cada responsabilidade. Isso mantém as classes leves e focadas em suas responsabilidades reais.
+No Conselho de Elrond, cada membro da Sociedade do Anel possui habilidades distintas: Gandalf usa magia, Legolas é um exímio arqueiro e Gimli usa seu machado. Não faria sentido obrigar todos a aprender magia ou arco e flecha. No código, o ISP diz que uma classe não deve ser forçada a implementar funcionalidades que não usa. Em vez de uma interface ampla com todas as habilidades, devemos dividi-la em interfaces menores, como “Guerreiro” ou “Mago”, permitindo que cada personagem implemente apenas o que faz sentido para suas habilidades.
 
 ### 5. **Dependency Inversion Principle (DIP) - Princípio da Inversão de Dependência**
 
-Módulos de alto nível não devem depender de módulos de baixo nível, mas de abstrações. As dependências devem estar baseadas em interfaces ou classes abstratas, e não em implementações concretas. Isso permite que os módulos sejam desacoplados e facilita a substituição de implementações sem alterar o módulo principal.
+Frodo precisa de uma companhia diversificada para sua jornada — de guerreiros a magos. Ele não pode depender de alguém específico (como só Gandalf), mas sim de habilidades que o grupo como um todo oferece. No código, o DIP sugere que módulos de alto nível (como uma jornada) dependam de abstrações (habilidades) em vez de implementações concretas (um personagem específico). Isso permite que Frodo tenha flexibilidade para ter qualquer membro da Sociedade do Anel ao seu lado, desde que ele tenha as habilidades necessárias para a missão, facilitando a substituição de membros sem comprometer a missão.
 
 ---
